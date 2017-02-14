@@ -1,10 +1,10 @@
 import shutil
 import os
 
-from bk2.basiskaartbuild import fill_bk
 from basiskaart_setup import VALUES
 
 # Geen testen voor retrieval van files vanaf objectstore. Bestaande code....
+from bk2.basiskaartbuild import fill_bk
 
 
 def test_kbk10():
