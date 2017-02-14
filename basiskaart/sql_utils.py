@@ -5,7 +5,7 @@ import subprocess
 import psycopg2
 import psycopg2.extensions
 
-from .basiskaart_setup import DATABASE
+from basiskaart_setup import DATABASE
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
@@ -115,5 +115,6 @@ def createdb():
                             password=DATABASE['PASSWORD'])
 
         sqlconn.run_sql('CREATE DATABASE basiskaart;')
+        sqlconn.run_sql('CREATE EXTENSION postgis;')
         sqlconn.commit()
         sqlconn.close()

@@ -3,7 +3,7 @@ import os.path
 import mimetypes
 import pytest
 
-from ..objectstore  import ObjectStore
+from objectstore.objectstore import ObjectStore
 
 
 @pytest.fixture
